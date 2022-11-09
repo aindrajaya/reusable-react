@@ -42,7 +42,7 @@
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#feature-and-data-analysis">Features and Data Analysis</a></li>
+    <li><a href="#purpose">Purpose</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -89,6 +89,14 @@ This will start the application and open a web browser window with the applicati
 ## Roadmap
 
 See the [open issues](https://github.com/aindrajaya/reusable-react/issues) for a list of proposed features (and known issues).
+
+<!-- ROADMAP -->
+## Purpose
+* Knowing how to use React in case create Reusable components
+* Store the knowledge of creating Reusable components
+* Build both components and hooks together
+* Knowing how things work under the hood, and build things to solidify that understanding.
+
 
 ## Features
 * Reusable components
