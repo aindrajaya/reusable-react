@@ -2,6 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
+const Badge = ({color, children}) => {
+  return(
+    <span className={`${color} badge`}>{children}</span>
+  ) 
+}
+
+const ComponentBadges = () => {
+    return(
+    <section>
+      <h2>Check out these badges!</h2>
+      <Badge color="green">Success</Badge> This is operational. <br />
+      <Badge color="red">Removed</Badge> This is critical. <br />
+      <Badge color="yellow">Warning</Badge> This is a warning. <br />
+      <Badge color="blue">Beta</Badge> This is in progress. <br />
+    </section>
+  )
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -20,9 +38,10 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        {/* <p>
           Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        </p> */}
+        <ComponentBadges />
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
