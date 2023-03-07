@@ -1,8 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+// import reactLogo from './assets/react.svg'
 import './App.css'
 
-function App() {
+const Badge = ({color, children}) => {
+  return(
+    <span className={`${color} badge`}>{children}</span>
+  ) 
+}
+
+const ComponentBadges = () => {
+    return(
+    <section>
+      <h2>Check out these badges!</h2>
+      <Badge color="green">Success</Badge> This is operational. <br />
+      <Badge color="red">Removed</Badge> This is critical. <br />
+      <Badge color="yellow">Warning</Badge> This is a warning. <br />
+      <Badge color="blue">Beta</Badge> This is in progress. <br />
+    </section>
+  )
+}
+
+const App = () => {
   const [count, setCount] = useState(0)
 
   return (
@@ -12,7 +30,7 @@ function App() {
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
         </a>
       </div>
       <h1>Vite + React</h1>
@@ -20,9 +38,10 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        {/* <p>
           Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        </p> */}
+        <ComponentBadges />
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
@@ -31,4 +50,4 @@ function App() {
   )
 }
 
-export default App
+export {App};
