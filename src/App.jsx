@@ -3,8 +3,25 @@ import { useState } from 'react'
 import './App.css'
 
 const Badge = ({color, children}) => {
+  const [isHovering, setIsHovering] = useState(false);
+  
+  function handleMouseEnter(){
+    setIsHovering(true);
+  }
+
+  function handleMoustLeave(){
+    setIsHovering(false);
+  }
+
   return(
-    <span className={`${color} badge`}>{children}</span>
+    <span className={`${color} badge`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMoustLeave}>
+      {children}
+      {isHovering && (
+        <div className='info' style={{backgroundColor:color}}>
+          Yupp it's {children}
+        </div>
+      )}
+    </span>
   ) 
 }
 

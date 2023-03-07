@@ -71,3 +71,17 @@ section {
 .blue {
   background: #41A5E1;
 }
+
+.info {
+  display: inline-block;
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  bottom: 14%;
+  left: 46%;
+  width: 120px;
+  color: wheat;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px; 
+}
